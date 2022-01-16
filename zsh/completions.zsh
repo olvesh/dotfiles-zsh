@@ -31,27 +31,28 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
 
-# Autocompletion for git-friendly
-fpath=($(brew --prefix)/share/zsh/functions $fpath)
-autoload -Uz _git && _git
-compdef __git_branch_names branch br
+# Autocompletion for git-friendly 
+if [[ -f "/opt/homebrew" ]]; then
+  fpath=($(brew --prefix)/share/zsh/functions $fpath)
+  autoload -Uz _git && _git
+  compdef __git_branch_names branch br
 
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  if type brew &>/dev/null
+  then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-  autoload -Uz compinit
-  compinit
-fi
-
-source <(kubectl completion zsh)
-
+    autoload -Uz compinit
+    compinit
+  fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
-
 # The next line enables zsh completion for gcloud.
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+fi
+
+source <(kubectl completion zsh)
+
 
