@@ -1,8 +1,8 @@
 {
-    "name": "Artem Sapegin",
-    "email": "artem@sapegin.ru",
-    "url": "https://sapegin.me",
-    "github": "sapegin",
+    "name": "Olve S. Hansen",
+    "email": "olvesh@gmail.com",
+    "url": "https://github.com/olvesh",
+    "github": "olvesh",
     "eslintPreset": "tamia",
     "eslintObsoleteDependencies": ["eslint-plugin-prettier"],
     "prettierPattern": "**/*.{js,md}",

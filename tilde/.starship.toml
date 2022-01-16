@@ -1,12 +1,12 @@
-format = """\
-  $username\
-  $hostname\
-  $directory\
-  $custom\
-  $git_state\
-  $line_break\
-  $character\
-  """
+#format = """\
+#  $username\
+#  $hostname\
+#  $directory\
+#  $custom\
+#  $git_state\
+#  $line_break\
+#  $character\
+#  """
 
 [directory]
 style = "bold white"
@@ -15,3 +15,30 @@ style = "bold white"
 command = "starship-git-simple"
 when = "true"
 style = ""
+
+#[battery]
+#disabled = false
+#[[battery.display]]
+#threshold = 100
+
+
+[cmd_duration]
+disabled = false
+
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
+
+[kubernetes.context_aliases]
+"gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+
+[azure]
+disabled = false
+format = "on [$symbol($subscription)]($style) "
+symbol = "ﴃ "
+style = "blue bold"
+
+[gcloud]
+format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+

@@ -60,7 +60,7 @@ export GREP_COLOR='1;33'
 export BAT_THEME="DarkNeon"
 
 # Homebrew install badge: beer sucks, coffee rules
-export HOMEBREW_INSTALL_BADGE='☕'
+#export HOMEBREW_INSTALL_BADGE='☕'
 
 # git-friendly: disable bundle after pull
 export GIT_FRIENDLY_NO_BUNDLE=true

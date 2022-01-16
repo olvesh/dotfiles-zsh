@@ -5,7 +5,7 @@ source ~/dotfiles/zsh/completions.zsh
 source ~/dotfiles/zsh/key-bindings.zsh
 
 # Do not overwrite files when redirecting using ">". Note that you can still override this with ">|"
-set -o noclobber
+# set -o noclobber
 
 # Enable extended glob
 setopt extendedglob
@@ -57,3 +57,5 @@ _fzf_compgen_dir() {
 export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init zsh)"
 
+alias k=kubectl
+compdef __start_kubectl k

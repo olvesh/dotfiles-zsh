@@ -95,8 +95,8 @@
 	newHighlight = green bold 22
 
 [user]
-	name = Artem Sapegin
-	email = artem@sapegin.ru
+	name = Olve S. Hansen
+	email = olvesh@gmail.com
 
 # Include local settings
 [include]

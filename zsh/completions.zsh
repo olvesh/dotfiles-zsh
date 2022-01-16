@@ -1,3 +1,5 @@
+
+
 # Caching autocompletion
 # https://blog.callstack.io/supercharge-your-terminal-with-zsh-8b369d689770
 autoload -Uz compinit
@@ -33,3 +35,23 @@ zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
 fpath=($(brew --prefix)/share/zsh/functions $fpath)
 autoload -Uz _git && _git
 compdef __git_branch_names branch br
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+source <(kubectl completion zsh)
+
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+
+# The next line enables zsh completion for gcloud.
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+

@@ -35,8 +35,6 @@ alias get="curl -O -L"
 # Run npm script without annoying noise
 alias nr="npm run --silent"
 
-# Jest watch
-alias j="npx jest --watch"
 
 # Make a directory and cd to it
 take() {
@@ -72,3 +70,6 @@ clone() {
     npm install
   fi
 }
+
+echo 'alias k=kubectl' >>~/.zshrc
+echo 'compdef __start_kubectl k' >>~/.zshrc

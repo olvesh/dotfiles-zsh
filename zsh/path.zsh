@@ -15,5 +15,6 @@ PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./node_modules/.bin'
 [ -d /usr/local/opt/ruby/bin ] && _prepend_path "/usr/local/opt/ruby/bin"
 [ -d /usr/local/opt/coreutils/libexec/gnubin ] && _prepend_path "/usr/local/opt/coreutils/libexec/gnubin"
 [ -d ~/dotfiles/bin ] && _prepend_path "$HOME/dotfiles/bin"
-[ -d ~/bin ] && _prepend_path "$HOME/bin"
+[ -d /opt/homebrew/bin ] && _prepend_path "/opt/homebrew/bin"
+[ -d /opt/homebrew/sbin ] && _prepend_path "/opt/homebrew/sbin"
 export PATH
