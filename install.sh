@@ -1,7 +1,7 @@
 
 curl -fsSL https://starship.rs/install.sh | bash -s -- -y
 
-./sync.py 
+yes | ./sync.py
 
 export DEBIAN_FRONTEND=noninteractive
 export INSTALL_ZSH=true
@@ -22,7 +22,7 @@ sudo apt-get install -y \
   wget \
   unzip \
   apt-transport-https \
-  lsb-release 
+  lsb-release
 
 # Install Azure CLI
 # echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/azure-cli.list
